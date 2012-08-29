@@ -42,7 +42,7 @@ public class SearchPatientTask
 				null) + Constants.PATIENT_SEARCH_URL;
 		String username = sharedPreferences.getString(PreferencesActivity.KEY_USERNAME, null);
 		String password = sharedPreferences.getString(PreferencesActivity.KEY_PASSWORD, null);
-		int programId = 1;
+		int program = Integer.valueOf(sharedPreferences.getString(PreferencesActivity.KEY_PROGRAM, "0"));
 		
 		try {
 			URL u = new URL(url);
@@ -59,7 +59,7 @@ public class SearchPatientTask
 			DataOutputStream dos = new DataOutputStream(new GZIPOutputStream(c.getOutputStream()));
 			dos.writeUTF(username); // username
 			dos.writeUTF(password); // password
-			dos.writeInt(programId);
+			dos.writeInt(program);
 			dos.writeUTF(name);
 			dos.writeUTF(identifier);
 	
@@ -104,7 +104,6 @@ public class SearchPatientTask
 			mResults.put(
 					Constants.TASK_ERROR,
 					"Kindly move to get a stronger signal to OpenMRS.\n\nIf you have good reception and it still fails, please contact the system administrator.");
-			return mResults;
 		} finally {
 			// shutdown connections
 			cleanup();

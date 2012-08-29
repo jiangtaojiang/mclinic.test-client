@@ -21,6 +21,7 @@ public class PreferencesActivity extends PreferenceActivity
 	public static String KEY_USERNAME = "username";
 	public static String KEY_PASSWORD = "password";
 	public static String KEY_SAVED_SEARCH = "saved_search";
+	public static String KEY_PROGRAM = "program";
 
 	public static String KEY_PROVIDER = "provider";
 	public static String KEY_COHORT = "cohort";
@@ -55,6 +56,7 @@ public class PreferencesActivity extends PreferenceActivity
 		updateSavedSearch();
 		updateProvider();
 		updateCode();
+		updateProgram();
 	}
 
 	@Override
@@ -85,6 +87,8 @@ public class PreferencesActivity extends PreferenceActivity
 			updateProvider();
 		} else if (key.equals(KEY_CODE)) {
 			updateCode();
+		} else if (key.equals(KEY_PROGRAM)) {
+			updateProgram();
 		}
 	}
 
@@ -139,5 +143,11 @@ public class PreferencesActivity extends PreferenceActivity
 				etp.setSummary(etp.getText().replaceAll(".", "*"));
 			}
 		}
+	}
+	
+	private void updateProgram() {
+		EditTextPreference etp = (EditTextPreference) this
+				.getPreferenceScreen().findPreference(KEY_PROGRAM);
+		etp.setSummary(etp.getText());
 	}
 }

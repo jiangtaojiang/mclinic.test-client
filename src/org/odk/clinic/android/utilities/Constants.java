@@ -43,6 +43,7 @@ public class Constants {
 	
 	public static final String PATIENTS = "Patients";
 	public static final String OBSERVATIONS = "Observations";
+	public static final String FORMLIST = "formlist";
 	
 	public static final String SCREEN_LOCKER = "org.odk.clinic.android.intent.action.LOCK";
 	public static final String CODE_REGEX = "[0-9]{6,}$";

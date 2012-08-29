@@ -42,8 +42,7 @@ public abstract class DownloadTask extends
 		dos.writeBoolean(savedSearch);
 		if (cohort > 0)
 			dos.writeInt(cohort);
-		//if (program > 0)
-			dos.writeInt(program);
+		dos.writeInt(program);
 
 		dos.flush();
 		dos.close();

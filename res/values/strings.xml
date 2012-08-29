@@ -11,6 +11,7 @@
     <string name="cancel_download">Cancel Download</string>
     <string name="change_code">Change Security Code</string>
     <string name="change_password">Change Password</string>
+    <string name="change_program">Change Program</string>
     <string name="change_provider">Change Provider</string>
     <string name="change_saved_search">Change Cohort or Search ID</string>
     <string name="change_server">Change URL</string>
@@ -56,6 +57,7 @@
     <string name="openmrs">OpenMRS</string>
     <string name="openmrs_forms">OpenMRS Forms</string>
     <string name="password">Password</string>
+    <string name="program">Program</string>
     <string name="provider">Provider</string>
     <string name="refresh">Refresh</string>
     <string name="refresh_forms">Refresh Forms</string>

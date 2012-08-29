@@ -126,8 +126,7 @@ public class DownloadPatientActivity extends Activity implements
 				getString(R.string.default_password));
 		
 		String  cohortId = String.valueOf(settings.getInt(PreferencesActivity.KEY_COHORT, 0));
-		//String programId = settings.getString(PreferencesActivity.KEY_PROGRAM, "0");
-		String programId = "1";
+		String programId = settings.getString(PreferencesActivity.KEY_PROGRAM, "0");
 		String savedSearch = String.valueOf(settings.getBoolean(PreferencesActivity.KEY_USE_SAVED_SEARCHES, false));
 		mDownloadTask = new DownloadPatientTask();
 		mDownloadTask.setDownloadListener(DownloadPatientActivity.this);

@@ -45,6 +45,14 @@
             android:inputType="phone"
             android:key="provider"
             android:title="@string/provider" />
+        
+        <EditTextPreference
+	        android:id="@+id/program"
+	        android:defaultValue="0"
+	        android:dialogTitle="@string/change_program"
+	        android:inputType="phone"
+	        android:key="program"
+	        android:title="@string/program" />
 
         <EditTextPreference
             android:id="@+id/saved_search"
